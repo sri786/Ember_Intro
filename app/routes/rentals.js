@@ -1,7 +1,9 @@
 import Route from '@ember/routing/route';
-//export default Route.extend({
-//);
- return [{
+
+export default Route.extend({
+  model() {
+    return this.get('store').findAll('rental');
+/*    return [{
       id: 'grand-old-mansion',
       title: 'Grand Old Mansion',
       owner: 'Veruca Salt',
@@ -30,6 +32,8 @@ import Route from '@ember/routing/route';
       image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg',
       description: 'Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet.'
 
-    }];
+    }];*/
+  }
+});
 
 
